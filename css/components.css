@@ -1,8 +1,12 @@
 /* ==========================================
-   COMPONENTS.CSS — MODERN BENTO & HUD LAYOUTS
+   COMPONENTS.CSS — 5 NEW FUTURISTIC FEATURES
 ========================================== */
 
-/* ---------- NAVBAR ---------- */
+:root {
+    --accent-color: #38BDF8;
+}
+
+/* ---------- NAVBAR CONTROLS ---------- */
 .navbar{
     position:fixed;
     top:20px;
@@ -23,7 +27,7 @@
 .logo{
     font-size:24px;
     font-family:'Space Grotesk',sans-serif;
-    color:#60A5FA;
+    color:var(--accent-color);
     font-weight:bold;
 }
 
@@ -41,7 +45,7 @@ nav a{
 
 nav a:hover,
 nav a.active{
-    color:#38BDF8;
+    color:var(--accent-color);
 }
 
 nav a::after{
@@ -51,7 +55,7 @@ nav a::after{
     bottom:-6px;
     width:0%;
     height:2px;
-    background:linear-gradient(90deg,#38BDF8,#2563EB);
+    background:linear-gradient(90deg,var(--accent-color),#2563EB);
     border-radius:20px;
     transition:.3s;
 }
@@ -61,14 +65,107 @@ nav a.active::after{
     width:100%;
 }
 
-.hire-btn{
+.nav-controls{
+    display:flex;
+    align-items:center;
+    gap:12px;
     margin-left:auto;
-    padding:12px 26px;
+    margin-right:20px;
+}
+
+/* Feature 2: Theme Switcher Dots */
+.theme-switcher{
+    display:flex;
+    gap:6px;
+    background:rgba(255,255,255,0.05);
+    padding:6px 10px;
     border-radius:999px;
-    background:linear-gradient(135deg,#2563EB,#38BDF8);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.theme-dot{
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.theme-dot:hover{
+    transform:scale(1.2);
+}
+
+.theme-dot.cyan{ background:#38BDF8; }
+.theme-dot.purple{ background:#7C3AED; }
+.theme-dot.green{ background:#22C55E; }
+
+/* Feature 4 & 3 Control Buttons */
+.audio-toggle-btn, .matrix-toggle-btn{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    color:white;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.3s;
+}
+
+.audio-toggle-btn:hover, .matrix-toggle-btn:hover{
+    border-color:var(--accent-color);
+    background:rgba(56,189,248,0.15);
+}
+
+.hire-btn{
+    padding:10px 22px;
+    border-radius:999px;
+    background:linear-gradient(135deg,#2563EB,var(--accent-color));
     color:white;
     font-weight:600;
     box-shadow:0 8px 25px rgba(37,99,235,.35);
+}
+
+/* Feature 1: Live Coding Ticker */
+.coding-ticker{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(56,189,248,0.08);
+    border:1px solid rgba(56,189,248,0.25);
+    padding:6px 16px;
+    border-radius:50px;
+    font-size:13px;
+    color:#7DD3FC;
+    margin-bottom:18px;
+}
+
+.ticker-dot{
+    width:8px;
+    height:8px;
+    background:var(--accent-color);
+    border-radius:50%;
+    box-shadow:0 0 10px var(--accent-color);
+    animation:livePulse 1.5s infinite;
+}
+
+/* Matrix Rain Canvas */
+.matrix-canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:-1;
+    opacity:0;
+    transition:opacity 0.5s ease;
+}
+
+.matrix-canvas.active{
+    opacity:0.25;
 }
 
 /* ---------- BUTTONS ---------- */
@@ -93,7 +190,7 @@ nav a.active::after{
 }
 
 .btn{
-    background:linear-gradient(90deg,#2563EB,#38BDF8);
+    background:linear-gradient(90deg,#2563EB,var(--accent-color));
     color:white;
     box-shadow:0 10px 30px rgba(37,99,235,.35);
 }
@@ -109,14 +206,14 @@ nav a.active::after{
 }
 
 .btn-outline:hover{
-    background:#0EA5E9;
-    color:white;
+    background:var(--accent-color);
+    color:#070b16;
 }
 
 .view-project{
     background:none;
     border:none;
-    color:#38BDF8;
+    color:var(--accent-color);
     font-size:17px;
     font-weight:600;
     cursor:pointer;
@@ -144,7 +241,7 @@ nav a.active::after{
 }
 
 .stat-card h1{
-    color:#38BDF8;
+    color:var(--accent-color);
     font-size:42px;
     margin-bottom:6px;
 }
@@ -196,7 +293,7 @@ nav a.active::after{
 }
 
 .project-content p{
-    color:var(--muted);
+    color:#94A3B8;
     line-height:1.8;
     margin-bottom:18px;
 }
@@ -247,7 +344,7 @@ nav a.active::after{
 }
 
 .close-modal:hover{
-    color:#38BDF8;
+    color:var(--accent-color);
 }
 
 .modal-grid{
@@ -284,13 +381,13 @@ nav a.active::after{
 .modal-buttons a{
     padding:12px 24px;
     border-radius:999px;
-    background:linear-gradient(90deg,#2563EB,#38BDF8);
+    background:linear-gradient(90deg,#2563EB,var(--accent-color));
     color:white;
     font-weight:600;
 }
 
 /* =====================================
-   SKILLS BENTO CARD SECTION (Clean, Modern, Bug-Free)
+   SKILLS BENTO CARD SECTION
 ===================================== */
 .skills{
     padding:140px 10%;
@@ -318,7 +415,7 @@ nav a.active::after{
     margin:0 auto 20px;
     border-radius:50%;
     overflow:hidden;
-    border:3px solid #38BDF8;
+    border:3px solid var(--accent-color);
     box-shadow:0 0 25px rgba(56,189,248,0.4);
 }
 
@@ -334,7 +431,7 @@ nav a.active::after{
 }
 
 .bento-role{
-    color:#38BDF8;
+    color:var(--accent-color);
     font-size:14px;
     font-weight:600;
     margin-bottom:24px;
@@ -363,7 +460,7 @@ nav a.active::after{
 }
 
 .tech-badge:hover{
-    border-color:#38BDF8;
+    border-color:var(--accent-color);
     background:rgba(56,189,248,0.2);
     transform:translateY(-2px);
 }
@@ -409,7 +506,86 @@ nav a.active::after{
 .bar>div>div{
     height:100%;
     border-radius:999px;
-    background:linear-gradient(90deg,#2563EB,#38BDF8);
+    background:linear-gradient(90deg,#2563EB,var(--accent-color));
+}
+
+
+/* =====================================
+   FEATURE 1: INTERACTIVE AI MINI-PLAYGROUND LAB
+===================================== */
+.playground-section{
+    padding:100px 10%;
+}
+
+.playground-box{
+    max-width:900px;
+    margin:0 auto;
+    padding:35px;
+    background:rgba(8,25,47,0.85);
+    border:1px solid rgba(56,189,248,0.3);
+    border-radius:28px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+.playground-screen{
+    background:#030712;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+    padding:22px;
+    height:180px;
+    overflow-y:auto;
+    font-family:monospace;
+    font-size:14px;
+    color:#38BDF8;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.terminal-prompt{
+    color:#94A3B8;
+}
+
+.playground-controls{
+    display:flex;
+    gap:10px;
+    margin-bottom:18px;
+    flex-wrap:wrap;
+}
+
+.preset-btn{
+    background:rgba(56,189,248,0.08);
+    border:1px solid rgba(56,189,248,0.25);
+    color:#7DD3FC;
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:13px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.preset-btn:hover{
+    background:var(--accent-color);
+    color:#070b16;
+}
+
+.playground-input-row{
+    display:flex;
+    gap:12px;
+}
+
+.playground-input-row input{
+    flex-grow:1;
+    padding:14px 20px;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.04);
+    color:white;
+    font-size:15px;
+}
+
+.playground-input-row input:focus{
+    outline:none;
+    border-color:var(--accent-color);
 }
 
 
@@ -448,8 +624,8 @@ nav a.active::after{
     left:0;
     width:100%;
     height: var(--timelineFill, 0%);
-    background:linear-gradient(180deg,#38BDF8,#2563EB,#7C3AED);
-    box-shadow:0 0 20px #38BDF8;
+    background:linear-gradient(180deg,var(--accent-color),#2563EB,#7C3AED);
+    box-shadow:0 0 20px var(--accent-color);
     transition: height 0.1s ease-out;
 }
 
@@ -482,12 +658,12 @@ nav a.active::after{
 
 .timeline-card:hover{
     transform:translateY(-6px);
-    border-color:#38BDF8;
+    border-color:var(--accent-color);
     box-shadow:0 0 30px rgba(56,189,248,.2);
 }
 
 .timeline-card span{
-    color:#38BDF8;
+    color:var(--accent-color);
     font-size:13px;
     letter-spacing:2px;
     font-weight:700;
@@ -514,7 +690,7 @@ nav a.active::after{
     justify-content:center;
     font-size:22px;
     background:#08192F;
-    border:2px solid #38BDF8;
+    border:2px solid var(--accent-color);
     box-shadow:0 0 20px rgba(56,189,248,.35);
     top:28px;
     z-index:5;
@@ -563,12 +739,12 @@ nav a.active::after{
 
 .counter-card h1{
     font-size:52px;
-    color:#38BDF8;
+    color:var(--accent-color);
 }
 
 .counter-card h3{
     font-size:28px;
-    color:#38BDF8;
+    color:var(--accent-color);
 }
 
 .counter-card span{
@@ -636,7 +812,7 @@ nav a.active::after{
 }
 
 .status-left h2{
-    color:#38BDF8;
+    color:var(--accent-color);
     margin:6px 0;
     font-size:24px;
 }
@@ -651,7 +827,7 @@ nav a.active::after{
     height:12px;
     display:inline-block;
     border-radius:50%;
-    background:#38BDF8;
+    background:var(--accent-color);
     animation:livePulse 1.5s infinite;
 }
 
@@ -681,7 +857,7 @@ nav a.active::after{
 }
 
 .float-card h4{
-    color:#38BDF8;
+    color:var(--accent-color);
     font-size:22px;
 }
 
@@ -702,7 +878,7 @@ nav a.active::after{
 
 
 /* ==========================================
-   CONTACT COMMAND CENTER & HOLOGRAPHIC HUD CARD (Replacing Earth Orbit)
+   CONTACT COMMAND CENTER & HOLOGRAPHIC HUD CARD
 ========================================== */
 .contact{
     padding:160px 10%;
@@ -743,7 +919,7 @@ nav a.active::after{
     left:0;
     width:100%;
     height:3px;
-    background:linear-gradient(90deg, #2563EB, #38BDF8, #7C3AED);
+    background:linear-gradient(90deg, #2563EB, var(--accent-color), #7C3AED);
 }
 
 .holo-hud-header{
@@ -752,7 +928,7 @@ nav a.active::after{
     gap:10px;
     font-size:12px;
     font-weight:600;
-    color:#38BDF8;
+    color:var(--accent-color);
     letter-spacing:1px;
     margin-bottom:25px;
 }
@@ -767,7 +943,7 @@ nav a.active::after{
     margin:0 auto 20px;
     border-radius:50%;
     overflow:hidden;
-    border:3px solid #38BDF8;
+    border:3px solid var(--accent-color);
     box-shadow:0 0 30px rgba(56,189,248,0.4);
 }
 
@@ -800,7 +976,7 @@ nav a.active::after{
 
 .holo-stat-item h4{
     font-size:15px;
-    color:#38BDF8;
+    color:var(--accent-color);
     margin-bottom:4px;
 }
 
@@ -834,7 +1010,7 @@ nav a.active::after{
 .contact-form input:focus,
 .contact-form textarea:focus{
     outline:none;
-    border-color:#38BDF8;
+    border-color:var(--accent-color);
     box-shadow:0 0 18px rgba(56,189,248,.3);
 }
 
@@ -863,7 +1039,7 @@ nav a.active::after{
 }
 
 .social-card h4{
-    color:#38BDF8;
+    color:var(--accent-color);
     font-size:16px;
 }
 
@@ -875,12 +1051,12 @@ nav a.active::after{
 
 .social-card:hover{
     transform:translateY(-4px);
-    border-color:#38BDF8;
+    border-color:var(--accent-color);
     box-shadow:0 0 20px rgba(56,189,248,.25);
 }
 
 .resume-card{
-    background:linear-gradient(135deg,#2563EB,#38BDF8);
+    background:linear-gradient(135deg,#2563EB,var(--accent-color));
 }
 
 
@@ -900,7 +1076,7 @@ nav a.active::after{
     width:76px;
     height:76px;
     border-radius:50%;
-    background:linear-gradient(135deg,#2563EB,#38BDF8);
+    background:linear-gradient(135deg,#2563EB,var(--accent-color));
     border:none;
     cursor:pointer;
     display:flex;
@@ -928,7 +1104,7 @@ nav a.active::after{
     height:104px;
     transform:translate(-50%, -50%);
     border-radius:50%;
-    border:2px dashed #38BDF8;
+    border:2px dashed var(--accent-color);
     animation:rotateOrbit 10s linear infinite;
     pointer-events:none;
 }
@@ -938,12 +1114,12 @@ nav a.active::after{
     top:-2px;
     right:-2px;
     background:#08192F;
-    color:#38BDF8;
+    color:var(--accent-color);
     font-size:11px;
     font-weight:700;
     padding:3px 7px;
     border-radius:999px;
-    border:1px solid #38BDF8;
+    border:1px solid var(--accent-color);
     z-index:3;
 }
 
@@ -1039,7 +1215,7 @@ nav a.active::after{
 }
 
 .user-message{
-    background:linear-gradient(135deg,#2563EB,#38BDF8);
+    background:linear-gradient(135deg,#2563EB,var(--accent-color));
     color:white;
     align-self:flex-end;
     border-bottom-right-radius:4px;
@@ -1071,8 +1247,8 @@ nav a.active::after{
 }
 
 .suggestion-chip:hover{
-    background:#38BDF8;
-    color:#08192F;
+    background:var(--accent-color);
+    color:#070b16;
 }
 
 .ai-chat-footer{
@@ -1095,14 +1271,14 @@ nav a.active::after{
 
 .ai-chat-footer input:focus{
     outline:none;
-    border-color:#38BDF8;
+    border-color:var(--accent-color);
 }
 
 .ai-chat-footer button{
     width:40px;
     height:40px;
     border-radius:50%;
-    background:linear-gradient(135deg,#2563EB,#38BDF8);
+    background:linear-gradient(135deg,#2563EB,var(--accent-color));
     border:none;
     color:white;
     cursor:pointer;

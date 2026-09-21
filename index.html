@@ -21,6 +21,10 @@
   <div class="blob blob1"></div>
   <div class="blob blob2"></div>
   <div class="blob blob3"></div>
+
+  <!-- Matrix Rain Canvas Overlay -->
+  <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
+
   <header class="navbar">
     <div class="logo">JS.</div>
 
@@ -28,9 +32,23 @@
         <a href="#about" class="active">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#playground">AI Lab</a>
         <a href="#journey">Journey</a>
         <a href="#contact">Contact</a>
     </nav>
+
+    <div class="nav-controls">
+        <!-- Feature 2: Accent Color Switcher Widget -->
+        <div class="theme-switcher">
+            <span class="theme-dot cyan" data-color="#38BDF8" title="Neon Cyan"></span>
+            <span class="theme-dot purple" data-color="#7C3AED" title="Electric Purple"></span>
+            <span class="theme-dot green" data-color="#22C55E" title="Matrix Green"></span>
+        </div>
+        <!-- Feature 4: Audio Mute Toggle -->
+        <button id="audioToggleBtn" class="audio-toggle-btn" title="Toggle Sci-Fi SFX">🔊</button>
+        <!-- Feature 3: Matrix Rain Easter Egg Toggle -->
+        <button id="matrixToggleBtn" class="matrix-toggle-btn" title="Toggle Matrix Rain">⚡</button>
+    </div>
 
     <a href="#contact" class="hire-btn">Let's Talk</a>
 </header>
@@ -38,6 +56,12 @@
 <section class="hero">
   <div class="hero-text">
     <p class="tag">🚀 AI & Data Science Student</p>
+
+    <!-- Feature 1: Live Coding Activity Ticker -->
+    <div class="coding-ticker">
+        <span class="ticker-dot"></span>
+        <span id="tickerText">⚡ Live Activity: Building Expense Tracker AI Agent • Last commit: 1h ago</span>
+    </div>
 
     <h1>Hi, I'm <span>Jinesh Shingvi</span></h1>
 
@@ -52,7 +76,7 @@
 
     <div class="buttons">
       <a href="#projects" class="btn">View Projects</a>
-      <a href="#contact" class="btn-outline">Contact Me</a>
+      <a href="#playground" class="btn-outline">Test AI Lab</a>
     </div>
   </div>
 
@@ -302,7 +326,6 @@
 
     <div class="skills-container">
 
-        <!-- Modern Bento Profile & Tech Badge Card -->
         <div class="skills-bento-card glass-card">
             <div class="skills-bento-avatar">
                 <img src="assets/Jinesh.jpeg" alt="Jinesh Shingvi">
@@ -319,7 +342,6 @@
             </div>
         </div>
 
-        <!-- Right Content & Skill Bars -->
         <div class="skills-info">
 
             <h3>Current Focus</h3>
@@ -367,6 +389,28 @@
 
     </div>
 
+</section>
+
+<!-- ================= FEATURE 1: INTERACTIVE AI MINI-PLAYGROUND ================= -->
+<section class="playground-section" id="playground">
+    <div class="section-title">
+        <p>AI MINI-PLAYGROUND</p>
+        <h2>Test simulated model responses.</h2>
+    </div>
+    <div class="playground-box glass-card">
+        <div class="playground-screen" id="playgroundScreen">
+            <span class="terminal-prompt">&gt; System initialized. Select a preset prompt or type your query below to test Jinesh's simulated AI agent...</span>
+        </div>
+        <div class="playground-controls">
+            <button class="preset-btn" data-prompt="What is Jinesh's core tech stack?">⚡ Core Tech Stack</button>
+            <button class="preset-btn" data-prompt="Explain Expense Tracker AI features">💰 Expense Tracker AI</button>
+            <button class="preset-btn" data-prompt="What are Jinesh's career goals?">🎯 Career Goals</button>
+        </div>
+        <div class="playground-input-row">
+            <input type="text" id="playgroundInput" placeholder="Ask model anything...">
+            <button id="playgroundRunBtn" class="btn">Run Prompt</button>
+        </div>
+    </div>
 </section>
 
 <!-- ================= JOURNEY TIMELINE ================= -->
@@ -576,7 +620,6 @@
 
     <div class="contact-container">
 
-        <!-- LEFT SIDE: Holographic HUD Card -->
         <div class="contact-left">
             <div class="holo-hud-card glass-card">
                 <div class="holo-hud-header">
@@ -603,7 +646,6 @@
             </div>
         </div>
 
-        <!-- RIGHT SIDE -->
         <div class="contact-right">
             <div class="status-widget online-widget">
                 <div>
