@@ -1,0 +1,146 @@
+/* ==========================================
+   ANIMATIONS.CSS — RESTORED TYPING LINE & ORBITS
+========================================== */
+
+.hero-image img{
+    animation:floatPhoto 6s ease-in-out infinite;
+}
+
+@keyframes floatPhoto{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-15px); }
+}
+
+#typing{
+    display:inline-block;
+}
+
+.cursor-line{
+    display:inline-block;
+    color:#38BDF8;
+    font-weight:700;
+    font-size:34px;
+    margin-left:4px;
+    animation:blink .8s infinite;
+}
+
+@keyframes blink{
+    0%, 100%{ opacity: 1; }
+    50%{ opacity: 0; }
+}
+
+.spotlight{
+    position:fixed;
+    width:550px;
+    height:550px;
+    background:radial-gradient(circle,
+        rgba(37,99,235,.28),
+        rgba(59,130,246,.18),
+        transparent 70%
+    );
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    z-index:0;
+}
+
+.hero,
+.navbar,
+.about,
+.projects{
+    position:relative;
+    z-index:2;
+}
+
+.blob{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.35;
+    animation:floatBlob 18s ease-in-out infinite;
+}
+
+.blob1{ width:320px; height:320px; background:#2563EB; top:10%; left:65%; }
+.blob2{ width:260px; height:260px; background:#7C3AED; bottom:10%; left:-50px; animation-delay:5s; }
+.blob3{ width:240px; height:240px; background:#06B6D4; top:60%; right:-80px; animation-delay:10s; }
+
+@keyframes floatBlob{
+    0%,100%{ transform:translateY(0) translateX(0); }
+    25%{ transform:translateY(-30px) translateX(20px); }
+    50%{ transform:translateY(25px) translateX(-15px); }
+    75%{ transform:translateY(-15px) translateX(25px); }
+}
+
+.project-card:hover,
+.stat-card:hover{
+    transform:translateY(-8px) scale(1.01);
+    border-color:#38BDF8;
+    box-shadow:0 0 35px rgba(56,189,248,.22);
+}
+
+.modal-content{
+    animation:popup .35s ease;
+}
+
+@keyframes popup{
+    from{ opacity:0; transform:translateY(40px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+.hidden{
+    opacity:0;
+    transition:all .9s ease;
+}
+
+.timeline-item.left.hidden{ transform:translateX(-60px); }
+.timeline-item.right.hidden{ transform:translateX(60px); }
+
+.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.timeline-icon{
+    animation:pulse 3s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{ box-shadow:0 0 15px rgba(56,189,248,.35); }
+    50%{ box-shadow:0 0 35px rgba(56,189,248,.8), 0 0 70px rgba(37,99,235,.45); }
+}
+
+.timeline-line::before{
+    height:var(--timelineFill,0%);
+}
+
+/* ==========================================
+   FIXED ORBIT ROTATION KEYFRAMES (Centered)
+========================================== */
+@keyframes rotateOrbit{
+    from{ transform: translate(-50%, -50%) rotate(0deg); }
+    to{ transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotateOrbitReverse{
+    from{ transform: translate(-50%, -50%) rotate(360deg); }
+    to{ transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+@keyframes earthOrbit{
+    from{ transform: translate(-50%, -50%) rotate(0deg); }
+    to{ transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes earthOrbitReverse{
+    from{ transform: translate(-50%, -50%) rotate(360deg); }
+    to{ transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+@keyframes rotateEarth{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow{
+    0%,100%{ transform: scale(.95); opacity: .45; }
+    50%{ transform: scale(1.05); opacity: .9; }
+}

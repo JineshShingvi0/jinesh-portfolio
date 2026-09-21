@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinesh Shingvi | AI Engineer</title>
+
+  <!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- CSS Files -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="spotlight"></div>
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+  <header class="navbar">
+    <div class="logo">JS.</div>
+
+    <nav>
+        <a href="#about" class="active">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="hire-btn">Let's Talk</a>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="tag">🚀 AI & Data Science Student</p>
+
+    <h1>Hi, I'm <span>Jinesh Shingvi</span></h1>
+
+    <h2 style="display: flex; align-items: center; gap: 4px; flex-wrap: wrap;">
+      <span id="typing"></span><span class="cursor-line">|</span>
+    </h2>
+
+    <p class="intro">
+      First-year AI & DS Engineering student passionate about Python,
+      Automation, AI Agents and Full Stack Projects.
+    </p>
+
+    <div class="buttons">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn-outline">Contact Me</a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="assets/profile.png" alt="Jinesh Shingvi">
+  </div>
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section class="about" id="about">
+
+    <div class="section-title">
+        <p>ABOUT ME</p>
+        <h2>Turning ideas into intelligent software.</h2>
+    </div>
+
+    <div class="about-container">
+
+        <div class="about-left">
+
+            <h3>Hello! I'm Jinesh 👋</h3>
+
+            <p>
+                I'm a first-year B.Tech student pursuing Artificial Intelligence
+                & Data Science at AISSMS IOIT, Pune.
+            </p>
+
+            <p>
+                I enjoy building practical software that solves real business
+                problems using Python, MySQL, JavaScript, automation tools,
+                and AI concepts.
+            </p>
+
+            <p>
+                My goal is to become an AI Engineer capable of building
+                intelligent applications, AI agents, and scalable business tools.
+            </p>
+
+            <div class="college-card">
+                🎓 AISSMS Institute of Information Technology, Pune
+            </div>
+
+        </div>
+
+        <div class="about-right">
+
+            <div class="stat-card">
+                <h1 data-target="10">0</h1>
+                <p>Projects Built</p>
+            </div>
+
+            <div class="stat-card">
+                <h1 data-target="8">0</h1>
+                <p>Technologies Learning</p>
+            </div>
+
+            <div class="stat-card">
+                <h1 data-target="1">0</h1>
+                <p>Year into AI Journey</p>
+            </div>
+
+            <div class="stat-card">
+                <h1 data-target="100">0</h1>
+                <p>Passion for Building</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PROJECTS SECTION ================= -->
+<section class="projects" id="projects">
+
+  <div class="section-title">
+      <p>FEATURED PROJECTS</p>
+      <h2>Building products, not just projects.</h2>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card large">
+
+        <img src="assets/projects/expense-tracker.png" alt="Expense Tracker AI">
+
+        <div class="project-content">
+
+            <span class="project-tag">PYTHON PROJECT</span>
+
+            <h3>Expense Tracker AI</h3>
+
+            <p>
+                AI-powered personal finance management system with income,
+                expenses, budgets, categories and future AI assistant integration.
+            </p>
+
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>MySQL</span>
+                <span>AI</span>
+                <span>Analytics</span>
+            </div>
+
+            <button class="view-project"
+                data-project="expense">
+                View Details →
+            </button>
+
+        </div>
+
+    </div> 
+
+      <div class="project-card">
+          <img src="assets/projects/billing.png" alt="Billing Software">
+
+          <div class="project-content">
+              <h3>Shingvi Supermart Billing Software</h3>
+              <p>Retail billing platform with WhatsApp reminders and loyalty points.</p>
+
+              <div class="tech-stack">
+                  <span>Apps Script</span>
+                  <span>Sheets</span>
+                  <span>WhatsApp API</span>
+              </div>
+              <button class="view-project" data-project="billing">
+                  View Details →
+              </button>
+          </div>
+      </div>
+
+      <div class="project-card">
+          <img src="assets/projects/node-red.png" alt="Node RED">
+
+          <div class="project-content">
+              <h3>Node-RED Automation Hub</h3>
+              <p>Weather alerts, chatbot, PDF monitor, email automation.</p>
+
+              <div class="tech-stack">
+                  <span>Node-RED</span>
+                  <span>Automation</span>
+                  <span>JavaScript</span>
+              </div>
+              <button class="view-project" data-project="node">
+                  View Details →
+              </button>
+          </div>
+      </div>
+
+      <div class="project-card wide">
+          <img src="assets/projects/cake-shop.png" alt="Cake Shop Website">
+
+          <div class="project-content">
+              <h3>Soft & Sweet Cake Shop</h3>
+              <p>Responsive bakery website with WhatsApp ordering and product catalog.</p>
+
+              <div class="tech-stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+              </div>
+              <button class="view-project" data-project="cake">
+                  View Details →
+              </button>
+
+          </div>
+      </div>
+
+      <div class="project-card wide">
+          <img src="assets/projects/student-system.png" alt="Student Result Management">
+
+          <div class="project-content">
+              <h3>Student Result Management System</h3>
+              <p>Python console application with CRUD operations and JSON storage.</p>
+
+              <div class="tech-stack">
+                  <span>Python</span>
+                  <span>JSON</span>
+                  <span>OOP</span>
+              </div>
+              <button class="view-project" data-project="student">
+                  View Details →
+              </button>
+          </div>
+      </div>
+
+  </div>
+
+</section>
+
+<!-- ================= PROJECT MODAL ================= -->
+
+<div class="project-modal" id="projectModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal">✕</button>
+
+        <div class="modal-grid">
+
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="Project Screenshot">
+            </div>
+
+            <div class="modal-info">
+
+                <span id="modalCategory" class="project-tag"></span>
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalDescription"></p>
+
+                <div id="modalTech" class="tech-stack"></div>
+
+                <div class="modal-features">
+                    <h4>Key Features</h4>
+                    <ul id="modalFeatures"></ul>
+                </div>
+
+                <div class="modal-buttons">
+
+                  <a class="github-btn" target="_blank">
+                      GitHub
+                  </a>
+
+                  <a class="demo-btn" target="_blank">
+                      Live Demo ↗
+                  </a>
+
+              </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div> 
+
+<!-- ================= SKILLS BENTO SECTION ================= -->
+<section class="skills" id="skills">
+
+    <div class="section-title">
+        <p>TECH STACK</p>
+        <h2>Technologies I'm building with.</h2>
+    </div>
+
+    <div class="skills-container">
+
+        <!-- Modern Bento Profile & Tech Badge Card -->
+        <div class="skills-bento-card glass-card">
+            <div class="skills-bento-avatar">
+                <img src="assets/Jinesh.jpeg" alt="Jinesh Shingvi">
+            </div>
+            <h3>Jinesh Shingvi</h3>
+            <p class="bento-role">AI Engineer & Full-Stack Builder</p>
+            <div class="bento-tech-grid">
+                <div class="tech-badge"><img src="assets/icons/python.svg" alt="Python"> Python</div>
+                <div class="tech-badge"><img src="assets/icons/mysql.svg" alt="MySQL"> MySQL</div>
+                <div class="tech-badge"><img src="assets/icons/javascript.svg" alt="JS"> JavaScript</div>
+                <div class="tech-badge"><img src="assets/icons/github.svg" alt="Git"> GitHub</div>
+                <div class="tech-badge"><img src="assets/icons/node-red.svg" alt="Node-RED"> Node-RED</div>
+                <div class="tech-badge"><img src="assets/icons/ai.svg" alt="AI"> AI Agents</div>
+            </div>
+        </div>
+
+        <!-- Right Content & Skill Bars -->
+        <div class="skills-info">
+
+            <h3>Current Focus</h3>
+
+            <p>
+                Learning Artificial Intelligence, Python development,
+                automation, databases and full-stack web technologies.
+            </p>
+
+            <div class="skill-bars">
+
+                <div class="bar">
+                    <span>Python</span>
+                    <div><div style="width:90%"></div></div>
+                </div>
+
+                <div class="bar">
+                    <span>MySQL</span>
+                    <div><div style="width:80%"></div></div>
+                </div>
+
+                <div class="bar">
+                    <span>JavaScript</span>
+                    <div><div style="width:70%"></div></div>
+                </div>
+
+                <div class="bar">
+                    <span>HTML & CSS</span>
+                    <div><div style="width:92%"></div></div>
+                </div>
+
+                <div class="bar">
+                    <span>Node-RED</span>
+                    <div><div style="width:75%"></div></div>
+                </div>
+
+                <div class="bar">
+                    <span>Artificial Intelligence</span>
+                    <div><div style="width:60%"></div></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= JOURNEY TIMELINE ================= -->
+<section class="journey" id="journey">
+
+    <div class="section-title">
+        <p>MY JOURNEY</p>
+        <h2>From learning Python to building AI products.</h2>
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item left hidden">
+            <div class="timeline-icon">🐍</div>
+            <div class="timeline-card">
+                <span>2026</span>
+                <h3>Started Learning Python</h3>
+                <p>
+                    Began my programming journey by learning Python fundamentals,
+                    OOP, file handling, and real-world projects.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item right hidden">
+            <div class="timeline-icon">🎂</div>
+            <div class="timeline-card">
+                <span>2026</span>
+                <h3>Soft & Sweet Cake Shop Website</h3>
+                <p>
+                    Designed a responsive cake ordering website with WhatsApp ordering,
+                    product catalog, feedback section, and modern UI.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item left hidden">
+            <div class="timeline-icon">🛒</div>
+            <div class="timeline-card">
+                <span>2026</span>
+                <h3>Shingvi Supermart Billing Software</h3>
+                <p>
+                    Built retail billing software featuring loyalty points,
+                    inventory management, GST billing, and WhatsApp reminders.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item right hidden">
+            <div class="timeline-icon">⚙️</div>
+            <div class="timeline-card">
+                <span>2026</span>
+                <h3>Node-RED Automation Projects</h3>
+                <p>
+                    Created automation workflows for weather alerts,
+                    WhatsApp chatbot, PDF monitoring, and bulk email automation.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item left hidden">
+            <div class="timeline-icon">💰</div>
+            <div class="timeline-card">
+                <span>2026</span>
+                <h3>Expense Tracker AI</h3>
+                <p>
+                    Developed an AI-inspired expense management platform using Python,
+                    MySQL, analytics, budgets, and AI assistant planning.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item right hidden">
+            <div class="timeline-icon">🎓</div>
+            <div class="timeline-card">
+                <span>September 2026</span>
+                <h3>Joined AISSMS IOIT</h3>
+                <p>
+                    Started my B.Tech journey in Artificial Intelligence & Data Science
+                    while continuing to build practical software projects.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item left hidden future">
+            <div class="timeline-icon">🤖</div>
+            <div class="timeline-card">
+                <span>Future Goal</span>
+                <h3>AI Engineer • AI Agent Builder</h3>
+                <p>
+                    Building AI agents, SaaS platforms, automation tools,
+                    and intelligent software for businesses.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= AI DASHBOARD ================= -->
+<section class="dashboard" id="dashboard">
+
+  <div class="section-title">
+      <p>AI DASHBOARD</p>
+      <h2>Live statistics from my developer journey.</h2>
+  </div>
+
+  <div class="dashboard-grid">
+
+      <div class="glass-card large-card counter-card">
+          <div>
+              <p>Total Projects</p>
+              <h1 class="counter" data-target="10">19</h1>
+          </div>
+          <span>🚀</span>
+      </div>
+
+      <div class="glass-card large-card counter-card">
+          <div>
+              <p>GitHub Repositories</p>
+              <h1 class="counter" data-target="8">8</h1>
+          </div>
+          <span>💻</span>
+      </div>
+
+      <div class="glass-card counter-card">
+          <div>
+              <p>Automation Projects</p>
+              <h1 class="counter" data-target="5">5</h1>
+          </div>
+          <span>⚙️</span>
+      </div>
+
+      <div class="glass-card counter-card">
+          <div>
+              <p>Technologies</p>
+              <h1 class="counter" data-target="8">8</h1>
+          </div>
+          <span>🌐</span>
+      </div>
+
+      <div class="glass-card counter-card">
+          <div>
+              <p>Months Learning AI</p>
+              <h1 class="counter" data-target="12">12</h1>
+          </div>
+          <span>🧠</span>
+      </div>
+
+      <div class="glass-card counter-card">
+          <div>
+              <p>Future Goal</p>
+              <h3>AI Engineer</h3>
+          </div>
+          <span>🤖</span>
+      </div>
+
+  </div>
+
+    <div class="github-section">
+        <div class="github-header">
+            <h3>GitHub Activity</h3>
+            <p>Consistency is better than intensity.</p>
+        </div>
+        <div class="github-grid" id="githubGrid"></div>
+    </div>
+
+    <div class="status-widget">
+        <div class="status-left">
+            <p>AI Assistant Status</p>
+            <h2>ONLINE</h2>
+            <span class="live-dot"></span>
+        </div>
+        <div class="status-right">
+            <p>Currently Building</p>
+            <h4>Expense Tracker AI • AI Agents • Full Stack Projects</h4>
+        </div>
+    </div>
+
+    <div class="floating-dashboard">
+        <div class="float-card one">
+            <h4>Python</h4>
+            <p>Primary Language</p>
+        </div>
+        <div class="float-card two">
+            <h4>MySQL</h4>
+            <p>Database Projects</p>
+        </div>
+        <div class="float-card three">
+            <h4>Node-RED</h4>
+            <p>Automation Workflows</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- ================= CONTACT COMMAND CENTER ================= -->
+<section class="contact" id="contact">
+
+    <div class="section-title">
+        <p>LET'S CONNECT</p>
+        <h2>Let's build something amazing together.</h2>
+    </div>
+
+    <div class="contact-container">
+
+        <!-- LEFT SIDE: Holographic HUD Card -->
+        <div class="contact-left">
+            <div class="holo-hud-card glass-card">
+                <div class="holo-hud-header">
+                    <span class="live-dot"></span>
+                    <span>SECURE COMMS LINK ACTIVE</span>
+                </div>
+                <div class="holo-hud-body">
+                    <div class="holo-avatar">
+                        <img src="assets/profile.png" alt="Jinesh Shingvi">
+                    </div>
+                    <h3>Available for Opportunities</h3>
+                    <p>Open for AI engineering internships, freelance software projects, and tech collaborations.</p>
+                    <div class="holo-hud-stats">
+                        <div class="holo-stat-item">
+                            <h4>Pune, India</h4>
+                            <p>Location</p>
+                        </div>
+                        <div class="holo-stat-item">
+                            <h4>B.Tech AI & DS</h4>
+                            <p>AISSMS IOIT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="contact-right">
+            <div class="status-widget online-widget">
+                <div>
+                    <p>AI Assistant Status</p>
+                    <h3>Available for Projects</h3>
+                </div>
+                <span class="live-dot"></span>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Tell me about your idea..." rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message 🚀</button>
+            </form>
+
+            <div class="social-grid">
+                <a href="https://github.com/JineshShingvi0" class="social-card" target="_blank">
+                    <img src="assets/icons/github.svg" alt="GitHub">
+                    <div>
+                        <h4>GitHub</h4>
+                        <p>View My Projects</p>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/jineshshingvi/" class="social-card" target="_blank">
+                    <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <p>Let's Connect</p>
+                    </div>
+                </a>
+
+                <a href="mailto:jineshshingvi2@gmail.com" class="social-card">
+                    <img src="assets/icons/email.svg" alt="Email">
+                    <div>
+                        <h4>Email</h4>
+                        <p>Contact Me</p>
+                    </div>
+                </a>
+
+                <a href="#" class="social-card resume-card">
+                    <img src="assets/icons/resume.svg" alt="Resume">
+                    <div>
+                        <h4>Download Resume</h4>
+                        <p>PDF Version</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= JINESH AI ASSISTANT WIDGET ================= -->
+<div class="ai-assistant-wrapper">
+    <button class="ai-orb-btn" id="aiOrbBtn" aria-label="Open AI Assistant">
+        <div class="ai-orb-ring"></div>
+        <div class="ai-orb-core">🤖</div>
+        <span class="ai-orb-badge">AI</span>
+    </button>
+
+    <div class="ai-chat-window" id="aiChatWindow">
+        <div class="ai-chat-header">
+            <div class="ai-header-info">
+                <span class="live-dot"></span>
+                <div>
+                    <h4>Jinesh AI Assistant</h4>
+                    <p>Trained on Jinesh's portfolio</p>
+                </div>
+            </div>
+            <button class="ai-close-btn" id="aiCloseBtn">✕</button>
+        </div>
+
+        <div class="ai-chat-body" id="aiChatBody">
+            <div class="ai-message bot-message">
+                <p>Hi! I'm Jinesh's AI Assistant 🚀. Ask me anything about his projects (Expense Tracker, Supermart Billing, Node-RED), skills, or AISSMS AI &amp; DS journey!</p>
+            </div>
+        </div>
+
+        <div class="ai-chat-suggestions">
+            <button class="suggestion-chip" data-query="Tell me about Expense Tracker AI">💰 Expense Tracker</button>
+            <button class="suggestion-chip" data-query="What is Shingvi Supermart Billing?">🛒 Supermart Billing</button>
+            <button class="suggestion-chip" data-query="What is Jinesh's education?">🎓 Education &amp; AISSMS</button>
+            <button class="suggestion-chip" data-query="How to contact Jinesh?">📬 Contact</button>
+        </div>
+
+        <div class="ai-chat-footer">
+            <input type="text" id="aiUserInput" placeholder="Ask a question about Jinesh...">
+            <button id="aiSendBtn">🚀</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

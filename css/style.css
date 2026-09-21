@@ -1,0 +1,219 @@
+/* ==========================================
+   JINESH PORTFOLIO v2.0 — GLOBAL STYLES
+========================================== */
+
+:root{
+    --bg:#070b16;
+    --bg-dark:#030712;
+
+    --primary:#2563EB;
+    --secondary:#38BDF8;
+
+    --text:#FFFFFF;
+    --muted:#94A3B8;
+
+    --glass:rgba(255,255,255,.05);
+    --border:rgba(255,255,255,.08);
+
+    --radius:28px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px;
+    padding:140px 10% 80px;
+}
+
+.hero-text{
+    flex:1;
+    min-width:0;
+    max-width:560px;
+}
+
+.hero-image{
+    width:380px;
+    flex:0 0 380px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.tag{
+    color:var(--secondary);
+    font-weight:600;
+}
+
+h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:74px;
+    line-height:1;
+    margin:22px 0;
+}
+
+h1 span{
+    color:#60A5FA;
+}
+
+h2{
+    color:#CBD5E1;
+    margin-bottom:20px;
+}
+
+.intro{
+    color:var(--muted);
+    line-height:1.9;
+    font-size:20px;
+    margin:22px 0 34px;
+    max-width:480px;
+}
+
+.hero-image img{
+    width:360px;
+    border-radius:50%;
+    border:4px solid #3B82F6;
+    box-shadow:
+        0 0 40px rgba(59,130,246,.5),
+        0 0 120px rgba(37,99,235,.35);
+}
+
+/* ==========================================
+   COMMON SECTION TITLE
+========================================== */
+.section-title p{
+    color:var(--secondary);
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.section-title h2{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:48px;
+    margin-bottom:70px;
+}
+
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+.about{
+    padding:120px 10%;
+    position:relative;
+}
+
+.about-container{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-right{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(180px, 1fr));
+    gap:22px;
+    align-items:stretch;
+}
+
+.about-left h3{
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.about-left p{
+    color:var(--muted);
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:22px;
+}
+
+/* ==========================================
+   PROJECTS SECTION
+========================================== */
+.projects{
+    padding:140px 10%;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+}
+
+.large{
+    grid-column:span 2;
+}
+
+.wide{
+    grid-column:span 2;
+}
+
+.project-content{
+    padding:28px;
+}
+
+.project-content h3{
+    font-size:28px;
+    margin-bottom:14px;
+}
+
+.project-content p{
+    color:var(--muted);
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.project-tag{
+    color:var(--secondary);
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:700;
+}
+
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:22px;
+}
+
+.tech-stack span{
+    padding:8px 14px;
+    background:rgba(56,189,248,.08);
+    border:1px solid rgba(56,189,248,.25);
+    border-radius:999px;
+    color:#7DD3FC;
+    font-size:14px;
+}
